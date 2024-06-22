@@ -28,11 +28,12 @@ function wordScramble(word)
 function wordCheck()
 {
         let guess = inputBox.innerHTML;
-        if ("test"===guess) {
+        outputText.innerHTML = guess;
+        /*if ("test"===guess) {
         outputText.innerHTML = "Correct! Press 'Next Word' to keep playing";
         } else {
         outputText.innerHTML = "Stupid idiot";
-        }
+        }*/
     
 }
 function endGame()
