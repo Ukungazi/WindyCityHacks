@@ -6,10 +6,11 @@ const enter = document.getElementById("enter");
 enter.addEventListener("submit", () => {
     wordCheck();
   });
-
+wordCheck();
 function wordCheck()
 {
-    for (var i = 0; i<wordList.size; i++)
+    document.getElementById("guessBox").textContent='hi';
+    /* for (var i = 0; i<wordList.size; i++)
     {
         var scrambledWord = wordScramble(wordList[i])
         document.getElementById("guessBox").textContent=scrambledWord;
@@ -21,6 +22,7 @@ function wordCheck()
             document.getElementById("guessBox").textContent='Incorrect. Next word...';
         }
     }
+    */
 }
 function wordScramble(word)
 {
