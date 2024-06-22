@@ -27,17 +27,13 @@ function wordScramble(word)
 }
 function wordCheck()
 {
-    if (!end)
-    {
         let guess = inputBox.innerHTML;
-        if (scrambledWord===guess) {
+        if (wordList[index-1]===guess) {
         outputText.innerHTML = "Correct! Press 'Next Word' to keep playing";
         } else {
         outputText.innerHTML = "Stupid idiot";
         }
-    } else {
-        window.open("https://tanisha1738.softr.app/", '_blank').focus();
-    }
+    
 }
 function endGame()
 {
