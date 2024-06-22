@@ -10,7 +10,8 @@ function newWord()
 {
     if (index >= wordList.length)
     {
-        endGame();
+        outputText.innerHTML = "Congrats! You scored a site record! Click the link below to receive your prize";
+        scammyLink.style.visibility = 'visible';
     } else {
         scrambledWord = wordScramble(wordList[index]);
         outputText.innerHTML = scrambledWord;
@@ -36,11 +37,6 @@ function wordCheck()
         outputText.innerHTML = "Stupid idiot";
         }
     
-}
-function endGame()
-{
-outputText.innerHTML = "Congrats! You scored a site record! Click the link below to receive your prize";
-scammyLink.style.visibility = 'visible';
 }
 
 
