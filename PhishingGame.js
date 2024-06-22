@@ -1,9 +1,17 @@
 let score = 0;
 let index = 0;
+let scrambledWord = "";
 const wordList = ["laptop","mouse","screen","cable"];
 const inputBox = document.getElementById("guess");
 const outputText = document.getElementById("guessBox");
 
+
+function newWord()
+{
+    scrambledWord = wordScramble(wordList[index]);
+    outputText.innerHTML = scrambledWord;
+    index++;
+}
 function wordScramble(word)
 {
     if (word.length == 0) {
@@ -16,14 +24,12 @@ function wordScramble(word)
 }
 function wordCheck()
 {
-    let scrambledWord = wordScramble(wordList[index]);
     let guess = inputBox.innerHTML;
     if (scrambledWord == guess) {
         points += 500;
     } else {
         outputText.innerHTML = "Stupid idiot";
     }
-    index++;
 }
 
 
