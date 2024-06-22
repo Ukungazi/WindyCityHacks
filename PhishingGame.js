@@ -4,9 +4,11 @@ let scrambledWord = "";
 const wordList = ["laptop","mouse","screen","cable"];
 const inputBox = document.getElementById("guess");
 const outputText = document.getElementById("guessBox");
+const scammyLink = document.getElementById("scammyLink");
+scammyLink.style.visibility = 'hidden';
 function newWord()
 {
-    if (index == wordList.size)
+    if (index == wordList.size-1)
     {
         endGame();
     } else {
@@ -37,7 +39,9 @@ function wordCheck()
 }
 function endGame()
 {
-outputText.innerHTML = "Congrats! You scored 2000 points which is a site record! Enter your address below to receive your prize";
+outputText.innerHTML = "Congrats! You scored 2000 points which is a site record! Click the link below to receive your prize";
+scammyLink.style.visibility = 'visible';
+scammyLink.innerHTML = "Click me!";
 }
 
 
