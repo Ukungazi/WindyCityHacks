@@ -9,7 +9,7 @@ enter.addEventListener("submit", () => {
 wordCheck();
 function wordCheck()
 {
-    document.getElementById("guessBox").innerHTML="hi";
+    document.getElementById("guessBox").innerHTML= "hi";
     /* for (var i = 0; i<wordList.size; i++)
     {
         var scrambledWord = wordScramble(wordList[i])
