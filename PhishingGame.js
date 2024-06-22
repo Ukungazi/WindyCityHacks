@@ -25,6 +25,7 @@ function wordCheck()
     let guess = inputBox.innerHTML;
     if (scrambledWord.equals(guess)) {
         points += 500;
+        outputText.innerHTML = "wow!";
     } else {
         outputText.innerHTML = "Stupid idiot";
     }
