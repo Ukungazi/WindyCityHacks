@@ -1,6 +1,7 @@
 var score = 0;
 var index = 0;
 var wordList = ['laptop', 'mouse', 'screen', 'cable'];
+const btn = document.querySelector("button");
 
 wordCheck();
 function wordCheck()
