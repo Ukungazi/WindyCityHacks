@@ -22,14 +22,14 @@ function wordCheck()
         }
     }
 }
-function wordScramble(String word)
+function wordScramble(word)
 {
     if (word.length == 0)
     {
         return;
     }
-    int start = (Math.random() * word.length);
-    String newWord = word.substring(0,start) + word.substring(start+1);
+    var start = (Math.random() * word.length);
+    var newWord = word.substring(0,start) + word.substring(start+1);
     return word.substring(start,start+1) + wordScramble(newWord);
 }
 function endGame()
