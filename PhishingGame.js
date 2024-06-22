@@ -2,7 +2,7 @@ var score = 0;
 var index = 0;
 var wordList = ['laptop', 'mouse', 'screen', 'cable'];
 
-
+wordCheck();
 function wordCheck()
 {
     for (var i = 0; i<wordList.size; i++)
