@@ -1,9 +1,9 @@
 var score = 0;
 var index = 0;
 var wordList = ['laptop', 'mouse', 'screen', 'cable'];
-const input = document.querySelector("form");
-const btn = document.getElementById("enter");
-input.addEventListener("onclick", () => {
+const input = document.getElementById("guess");
+const enter = document.getElementById("enter");
+enter.addEventListener("onclick", () => {
     wordCheck();
   });
 
