@@ -8,7 +8,7 @@ const scammyLink = document.getElementById("scammyLink");
 scammyLink.style.visibility = 'hidden';
 function newWord()
 {
-    if (index == wordList.size-1)
+    if (index == wordList.length+1)
     {
         endGame();
     } else {
@@ -31,7 +31,7 @@ function wordCheck()
 {
         let guess = inputBox.value;
         if (wordList[index-1]===guess) {
-        outputText.innerHTML = "Correct! Press 'Next Word' to keep playing";
+        outputText.innerHTML = "Correct! Press 'New Word' to keep playing";
         } else {
         outputText.innerHTML = "Stupid idiot";
         }
