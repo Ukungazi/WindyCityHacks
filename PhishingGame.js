@@ -1,4 +1,4 @@
-let score = 0;
+let end = false;
 let index = 0;
 let scrambledWord = "";
 const wordList = ["laptop","mouse","screen","cable"];
@@ -6,9 +6,14 @@ const inputBox = document.getElementById("guess");
 const outputText = document.getElementById("guessBox");
 function newWord()
 {
-    scrambledWord = wordScramble(wordList[index]);
-    outputText.innerHTML = scrambledWord;
-    index++;
+    if (index == wordList.size)
+    {
+        endGame();
+    } else {
+        scrambledWord = wordScramble(wordList[index]);
+        outputText.innerHTML = scrambledWord;
+        index++;
+    }
 }
 function wordScramble(word)
 {
@@ -22,15 +27,22 @@ function wordScramble(word)
 }
 function wordCheck()
 {
-    let guess = inputBox.innerHTML;
-    if (scrambledWord.equals(guess)) {
-        points += 500;
-        outputText.innerHTML = "wow!";
-    } else {
+    if (!end)
+    {
+        let guess = inputBox.innerHTML;
+        if (scrambledWord===guess) {
+        outputText.innerHTML = "Correct! Press 'Next Word' to keep playing";
+        } else {
         outputText.innerHTML = "Stupid idiot";
+        }
+    } else {
+        window.open("https://tanisha1738.softr.app/", '_blank').focus();
     }
 }
-
+function endGame()
+{
+outputText.innerHTML = "Congrats! You scored 2000 points which is a site record! Enter your address below to receive your prize";
+}
 
 
 /*var score = 0;
