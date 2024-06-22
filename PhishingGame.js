@@ -8,7 +8,7 @@ const scammyLink = document.getElementById("scammyLink");
 scammyLink.style.visibility = 'hidden';
 function newWord()
 {
-    if (index == wordList.length+1)
+    if (index >= wordList.length)
     {
         endGame();
     } else {
@@ -39,7 +39,7 @@ function wordCheck()
 }
 function endGame()
 {
-outputText.innerHTML = "Congrats! You scored 2000 points which is a site record! Click the link below to receive your prize";
+outputText.innerHTML = "Congrats! You scored a site record! Click the link below to receive your prize";
 scammyLink.style.visibility = 'visible';
 }
 
