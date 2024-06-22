@@ -18,8 +18,12 @@ function wordCheck()
 {
     let scrambledWord = wordScramble(wordList[index]);
     let guess = inputBox.innerHTML;
-    if ()
-    
+    if (scrambledWord == guess) {
+        points += 500;
+    } else {
+        outputText.innerHTML = "Stupid idiot";
+    }
+    index++;
 }
 
 
