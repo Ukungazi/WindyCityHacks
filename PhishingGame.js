@@ -28,7 +28,7 @@ function wordScramble(word)
 function wordCheck()
 {
         let guess = inputBox.innerHTML;
-        if (wordList[index-1]===guess) {
+        if ("test"===guess) {
         outputText.innerHTML = "Correct! Press 'Next Word' to keep playing";
         } else {
         outputText.innerHTML = "Stupid idiot";
