@@ -41,7 +41,6 @@ function endGame()
 {
 outputText.innerHTML = "Congrats! You scored 2000 points which is a site record! Click the link below to receive your prize";
 scammyLink.style.visibility = 'visible';
-scammyLink.innerHTML = "Click me!";
 }
 
 
