@@ -3,7 +3,7 @@ var index = 0;
 var wordList = ['laptop', 'mouse', 'screen', 'cable'];
 const input = document.getElementById("guess");
 const enter = document.getElementById("enter");
-enter.addEventListener("onclick", () => {
+enter.addEventListener("submit", () => {
     wordCheck();
   });
 
