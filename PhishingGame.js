@@ -13,7 +13,7 @@ function newWord()
 function wordScramble(word)
 {
     if (word.length == 0) {
-        return;
+        return "";
     } else {
         let start = (Math.random() * word.length);
         let newWord = word.substring(0,start) + word.substring(start+1);
