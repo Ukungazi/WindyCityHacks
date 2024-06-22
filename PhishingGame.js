@@ -21,8 +21,9 @@ function wordCheck()
     if (scrambledWord == guess){
     points += 500;
     } else {
-    document.getElementById("guessBox").textContent='Incorrect. Next word...';
+    document.getElementById("guessBox").innerHTML='Incorrect. Next word...';
     }
+    document.getElementById("guessBox").innerHTML='Test';
 }
 function wordScramble(word)
 {
