@@ -27,7 +27,7 @@ function wordScramble(word)
 }
 function wordCheck()
 {
-        let guess = inputBox.innerHTML;
+        let guess = inputBox.value;
         outputText.innerHTML = guess;
         /*if ("test"===guess) {
         outputText.innerHTML = "Correct! Press 'Next Word' to keep playing";
