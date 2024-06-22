@@ -5,23 +5,24 @@ const input = document.getElementById("guess");
 const enter = document.getElementById("enter");
 
 enter.addEventListener("submit", () => {
-    wordCheck();
+    if (index < wordList.size)
+    {
+        var scrambledWord = wordScramble(wordList[index])
+        document.getElementById("guessBox").textContent=scrambledWord;
+        index++;
+        wordCheck();
+    } else {
+        endGame();
+    }
   });
 function wordCheck()
 {
-    while (index < wordList.size)
-    {
-        var scrambledWord = wordScramble(wordList[i])
-        document.getElementById("guessBox").textContent=scrambledWord;
-        var guess = input.textContent;
-        if (scrambledWord == guess)
-        {
-        points += 500;
-        } else {
-            document.getElementById("guessBox").textContent='Incorrect. Next word...';
-        }
+    var guess = input.innerHTML;
+    if (scrambledWord == guess){
+    points += 500;
+    } else {
+    document.getElementById("guessBox").textContent='Incorrect. Next word...';
     }
-    
 }
 function wordScramble(word)
 {
