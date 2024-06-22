@@ -1,7 +1,11 @@
 var score = 0;
 var index = 0;
 var wordList = ['laptop', 'mouse', 'screen', 'cable'];
-const btn = document.querySelector("button");
+const input = document.querySelector("form");
+input.addEventListener("onchange", () => {
+    const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+    document.body.style.backgroundColor = rndCol;
+  });
 
 wordCheck();
 function wordCheck()
