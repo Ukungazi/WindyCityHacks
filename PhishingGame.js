@@ -2,19 +2,18 @@ var score = 0;
 var index = 0;
 var wordList = ['laptop', 'mouse', 'screen', 'cable'];
 const input = document.querySelector("form");
-input.addEventListener("onchange", () => {
-    const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
-    document.body.style.backgroundColor = rndCol;
+const btn = document.getElementById("enter");
+input.addEventListener("onclick", () => {
+    wordCheck();
   });
 
-wordCheck();
 function wordCheck()
 {
     for (var i = 0; i<wordList.size; i++)
     {
         var scrambledWord = wordScramble(wordList[i])
         document.getElementById("guessBox").textContent=scrambledWord;
-        var guess = 
+        var guess = input.textContent;
         if (scrambledWord == guess)
         {
             points += 500;
