@@ -4,8 +4,6 @@ let scrambledWord = "";
 const wordList = ["laptop","mouse","screen","cable"];
 const inputBox = document.getElementById("guess");
 const outputText = document.getElementById("guessBox");
-
-
 function newWord()
 {
     scrambledWord = wordScramble(wordList[index]);
