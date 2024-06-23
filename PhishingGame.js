@@ -34,7 +34,7 @@ function wordCheck()
         if (wordList[index-1]===guess) {
         outputText.innerHTML = "Correct! Press 'New Word' to keep playing";
         } else {
-        outputText.innerHTML = "Stupid idiot";
+        outputText.innerHTML = "Incorrect. Press 'New Word' to try again";
         }
     
 }
